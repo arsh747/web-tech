@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #354a5f;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #4b84fc;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.primary-btn {
+    background-color: #4b84fc;
+    color: white;
+    border: 2px solid #4b84fc;
+}
+
+.primary-btn:hover {
+    background-color: #3a73ea;
+    border-color: #3a73ea;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ddd;
+}
+
+.secondary-btn:hover {
+    background-color: black;
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: #4b84fc;
+    border: 2px solid #4b84fc;
+}
+
+.outline-btn:hover {
+    background-color: #4b84fc;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/pexels-pixabay-416405.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+/* Service Boxes */
+.service-boxes {
+    margin-top: -50px;
+}
+
+.service-boxes .container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    flex: 1;
+    padding: 30px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.red-box {
+    background-color: #fc4b4b;
+}
+
+.dark-box {
+    background-color: #354a5f;
+}
+
+.blue-box {
+    background-color: #4b84fc;
+}
+
+.box i {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    margin-bottom: 15px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 span {
+    color: #fc4b4b;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 30px;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #4b84fc;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+}
+
+/* Business Plans Section */
+.business-plans {
+    background-color: black;
+    color: white;
+    padding: 80px 0;
+}
+
+.business-plans .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.plans-content, .plans-image {
+    flex: 1;
+}
+
+.plans-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.plans-content p {
+    margin-bottom: 30px;
+}
+
+.plans-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1 0 45%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+}
+
+.feature h3 span {
+    color: #fc4b4b;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Quality Section */
+.quality {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.quality h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quality p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Trust Section */
+.trust {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.trust .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.trust-content, .trust-image {
+    flex: 1;
+}
+
+.trust-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.trust-content p {
+    margin-bottom: 30px;
+}
+
+.trust-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Clients Section */
+.clients {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.client-logos img {
+    height: 50px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.client-logos img:hover {
+    opacity: 1;
+}
+
+.clients h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Design Section */
+.design {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.design .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.design-content, .design-image {
+    flex: 1;
+}
+
+.design-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.design-content p {
+    margin-bottom: 30px;
+}
+
+.design-features {
+    display: flex;
+    gap: 30px;
+}
+
+.design-feature {
+    flex: 1;
+    text-align: center;
+}
+
+.design-feature i {
+    font-size: 30px;
+    color: #4b84fc;
+    margin-bottom: 15px;
+}
+
+.design-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 25px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #ddd;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.showing {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .service-boxes .container {
+        flex-direction: column;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-plans .container,
+    .trust .container,
+    .design .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature {
+        flex: 1 0 100%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1, .section-header h2, .quality h2, .trust-content h2, .design-content h2 {
+        font-size: 28px;
+    }
+
+    .hero p, .plans-content p, .trust-content p, .design-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .design-features {
+        flex-direction: column;
+    }
+
+    .hero h1, .section-header h2, .quality h2 {
+        font-size: 24px;
+    }
+
+    .hero p, .plans-content p {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+}
